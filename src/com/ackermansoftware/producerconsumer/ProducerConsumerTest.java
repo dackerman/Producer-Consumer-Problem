@@ -2,9 +2,6 @@ package com.ackermansoftware.producerconsumer;
 
 public class ProducerConsumerTest {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		ThreadedQueue<Integer> q = new ThreadedQueue<Integer>(5);
 		Producer p = new Producer(q, "BOB", 500);
@@ -21,5 +18,4 @@ public class ProducerConsumerTest {
 		p4.start();
 		p5.start();
 	}
-
 }

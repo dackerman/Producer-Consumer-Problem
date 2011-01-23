@@ -1,6 +1,6 @@
 package com.ackermansoftware.producerconsumer;
 
-public class Consumer extends ProducerConsumer{
+public class Consumer extends ThreadedQueueActor{
 	
 	public Consumer(ThreadedQueue<Integer> q, String name, int waitTime) {
 		super(q, name, waitTime);
@@ -14,5 +14,4 @@ public class Consumer extends ProducerConsumer{
 			System.out.println("Consumer ("+name+") got value " + value);
 		}
 	}
-
 }

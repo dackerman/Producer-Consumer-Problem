@@ -1,6 +1,6 @@
 package com.ackermansoftware.producerconsumer;
 
-public class Producer extends ProducerConsumer{
+public class Producer extends ThreadedQueueActor{
 
 	public Producer(ThreadedQueue<Integer> q, String name, int waitTime) {
 		super(q, name, waitTime);
@@ -20,6 +20,4 @@ public class Producer extends ProducerConsumer{
 	private Integer getRandom() {
 		return Integer.valueOf((int) (Math.random() * 100));
 	}
-	
-
 }
